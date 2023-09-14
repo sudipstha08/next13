@@ -5,6 +5,8 @@ import FavIcon from '@public/assets/imgs/avatar.svg'
 import { theme } from '@utils'
 import { fetchData } from '@services'
 import styled from 'styled-components'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const MainContainer = styled.main`
   padding: 1rem 2rem;
@@ -18,6 +20,8 @@ const Home = () => {
     fetchData()
   }, [])
 
+  const router = useRouter()
+
   return (
     <div className="home">
       <Head>
@@ -28,12 +32,15 @@ const Home = () => {
 
       <MainContainer>
         This is the awesome Next JS template🔥
-        <Button label="hello">Say Hello</Button>
+        <Button label="hello" onClick={() => router.push('/blogs')}>
+          Say Hello
+        </Button>
         <div>
           <FavIcon />
         </div>
         <div>{theme.base}</div>
         <div>Happy coding 😉</div>
+        <Link href="/home">Go to home</Link>
       </MainContainer>
     </div>
   )
