@@ -1,6 +1,8 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { QueryClient, QueryClientProvider } from 'react-query'
+// eslint-disable-next-line import/no-unresolved
+import { Analytics } from '@vercel/analytics/react'
 import 'antd/dist/antd.css'
 import { GlobalStyles } from '../styles/globalStyles'
 
@@ -13,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Next | Template</title>
       </Head>
       <QueryClientProvider client={queryClient}>
+        <Analytics />
         <GlobalStyles />
         <Component {...pageProps} />
       </QueryClientProvider>

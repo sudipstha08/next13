@@ -24,10 +24,10 @@ const IndexDbPage: FC = () => {
       //   text: 'this is a note',
       // }
 
-      const pNotes = db.createObjectStore('personal_notes', {
+      db.createObjectStore('personal_notes', {
         keyPath: 'title',
       })
-      const todoNotes = db.createObjectStore('todo_notes', {
+      db.createObjectStore('todo_notes', {
         keyPath: 'title',
       })
       alert(`upgrade is called database name ${db.name} version ${db.version}`)
