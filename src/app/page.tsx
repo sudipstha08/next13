@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import { prisma } from '@src/db'
 import { TodoItem } from '@src/components'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Test Title',
+  description: 'Test description',
+}
 
 function getTodos() {
   return prisma.todo.findMany()

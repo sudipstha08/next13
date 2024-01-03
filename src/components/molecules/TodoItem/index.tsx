@@ -1,5 +1,7 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
+
 type TodoItemProps = {
   id: string
   title: string
@@ -8,6 +10,7 @@ type TodoItemProps = {
 }
 
 export function TodoItem({ id, title, complete, toggleTodo }: TodoItemProps) {
+  const router = useRouter()
   return (
     <li className="flex gap-1 items-center">
       <input
@@ -20,6 +23,7 @@ export function TodoItem({ id, title, complete, toggleTodo }: TodoItemProps) {
       />
       <label
         htmlFor="id"
+        onClick={() => router.push(`/todo/${id}`)}
         className="peer-checked:line-through cursor-pointer peer-checked:text-slate-500"
       >
         {title}
