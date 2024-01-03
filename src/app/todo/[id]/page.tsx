@@ -28,20 +28,19 @@ export async function generateMetadata(
     openGraph: {
       images: [
         {
-          url: 'https://nextjs.org/og.png', // Must be an absolute URL
+          url: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D', // Must be an absolute URL
           width: 800,
           height: 600,
         },
         {
-          url: 'https://nextjs.org/og-alt.png', // Must be an absolute URL
+          url: 'https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630', // Must be an absolute URL
           width: 1800,
           height: 1600,
           alt: 'My custom alt',
         },
       ],
-      title: 'Next.js',
       description: `description-${product?.title}`,
-      url: 'https://nextjs.org',
+      url: 'https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       siteName: 'Next.js 13 check metadata',
       locale: 'en_US',
       type: 'website',
@@ -53,7 +52,9 @@ export async function generateMetadata(
       siteId: '1467726470533754880',
       creator: 'test-@nextjs',
       creatorId: '1467726470533754880',
-      images: ['https://nextjs.org/og.png'], // Must be an absolute URL
+      images: [
+        'https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Ym9va3xlbnwwfHwwfHx8MA%3D%3D',
+      ], // Must be an absolute URL
     },
   }
 }
