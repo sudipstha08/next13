@@ -24,6 +24,9 @@ This is a NextJS Template with Typescript
 | `formik`            | form library             |
 | `yup`               | object schema validation |
 
+## prisma commands
+- npx prisma migrate dev --name init
+
 ## References
 1. https://nextjs.org/docs/getting-started
 2. https://github.com/jquense/yup
