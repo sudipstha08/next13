@@ -3,6 +3,61 @@
 import { prisma } from '@src/db'
 // import { usePathname, useSearchParams } from 'next/navigation'
 
+import { Metadata, ResolvingMetadata } from 'next'
+
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  // read route params
+  const id = params.id
+
+  // fetch data
+  const product = await prisma.todo.findFirst({ where: { id } })
+
+  // optionally access and extend (rather than replace) parent metadata
+  // const previousImages = (await parent).openGraph?.images || []
+
+  return {
+    title: product?.title,
+    openGraph: {
+      images: [
+        {
+          url: 'https://nextjs.org/og.png', // Must be an absolute URL
+          width: 800,
+          height: 600,
+        },
+        {
+          url: 'https://nextjs.org/og-alt.png', // Must be an absolute URL
+          width: 1800,
+          height: 1600,
+          alt: 'My custom alt',
+        },
+      ],
+      title: 'Next.js',
+      description: `description-${product?.title}`,
+      url: 'https://nextjs.org',
+      siteName: 'Next.js 13 check metadata',
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: product?.title,
+      description: `description-${product?.title}`,
+      siteId: '1467726470533754880',
+      creator: 'test-@nextjs',
+      creatorId: '1467726470533754880',
+      images: ['https://nextjs.org/og.png'], // Must be an absolute URL
+    },
+  }
+}
+
 async function getTodo(id: string) {
   'use server'
 
