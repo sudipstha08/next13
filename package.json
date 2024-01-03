@@ -11,7 +11,8 @@
     "lint-staged": "lint-staged",
     "fix": "yarn lint:ts --fix",
     "format": "eslint -c .eslintrc.js --ignore-path .eslintignore --fix",
-    "git-add": "git add ."
+    "git-add": "git add .",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@babel/core": "^7.17.8",
