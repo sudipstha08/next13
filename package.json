@@ -12,7 +12,9 @@
     "fix": "yarn lint:ts --fix",
     "format": "eslint -c .eslintrc.js --ignore-path .eslintignore --fix",
     "git-add": "git add .",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "postbuild": "yarn dev",
+    "prebuild": "yarn fix"
   },
   "dependencies": {
     "@babel/core": "^7.17.8",

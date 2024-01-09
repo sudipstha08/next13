@@ -3,26 +3,26 @@ This is a NextJS Template with Typescript
 
 ## Basic commands :wrench:
 
-|     Commands   |      Description           |
-| -------------- |--------------------------- |
+| Commands       | Description                |
+| -------------- | -------------------------- |
 | `yarn dev`     | run the development server |
 | `yarn install` | install dependencies       |
-| `yarn lint`	   | run linter                 |
+| `yarn lint`    | run linter                 |
 | `yarn remove`  | remove a package           |
 | `yarn build`   | build application          |
 
 ## Tech Stacks :package:
 
-|     Tech          |      Description           |
-|-------------------|----------------------------|
-| `next`            | server side rendering      |
-| `axios`           | promise based HTTP client  |
-| `react-query`     | data fetching library      |
-| `ant design`      | CSS library                |
-| `eslint/prettier` | linting                    |
-| `styled-components` | CSS on JS                |
-| `formik`            | form library             |
-| `yup`               | object schema validation |
+| Tech                | Description               |
+| ------------------- | ------------------------- |
+| `next`              | server side rendering     |
+| `axios`             | promise based HTTP client |
+| `react-query`       | data fetching library     |
+| `ant design`        | CSS library               |
+| `eslint/prettier`   | linting                   |
+| `styled-components` | CSS on JS                 |
+| `formik`            | form library              |
+| `yup`               | object schema validation  |
 
 ## prisma commands
 - npx prisma migrate dev --name init
@@ -31,6 +31,7 @@ This is a NextJS Template with Typescript
 1. https://nextjs.org/docs/getting-started
 2. https://github.com/jquense/yup
 3. https://formik.org/
-4. https://react-query.tanstack.com/
+4. https://react-query.tanstack.comblock
+5. https://docs.npmjs.com/cli/v9/using-npm/scripts
 
 Happy coding :v:
