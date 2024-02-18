@@ -1,5 +1,5 @@
-import { Data, ErrorBoundary } from '@src/components'
 import React, { Suspense } from 'react'
+import { Data, ErrorBoundary, Users } from '@src/components'
 import { ErrorBoundary as ReactErrorBoundry } from 'react-error-boundary'
 
 const SuspensePage = () => {
@@ -14,6 +14,8 @@ const SuspensePage = () => {
         <Data type="Users" hasError />
       </ReactErrorBoundry>
       <Data type="Comments" />
+
+      <Users />
     </>
   )
 }

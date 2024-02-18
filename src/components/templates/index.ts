@@ -1,1 +1,1 @@
-export const template = 'template'
+export * from './Users'
